@@ -1,8 +1,9 @@
-﻿{
-  "version": 2,
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!css/|js/|.*\\.).*)",
       "destination": "/index.html"
     }
   ]
