@@ -1,0 +1,359 @@
+﻿/* Janaseva AI — Amazon-Style Visual Theme & Design System */
+
+:root {
+  --primary-orange: #FF9900;
+  --deep-orange: #E47911;
+  --main-action-blue: #007185;
+  --hover-blue: #005B6B;
+  --page-bg: #EAEDED;
+  --card-bg: #FFFFFF;
+  --main-text: #0F1111;
+  --secondary-text: #565959;
+  --soft-blue-bg: #E7F4F5;
+  --success: #067D62;
+  --warning: #B12704;
+  --border-color: #D5D9D9;
+  --amazon-yellow-btn: #FFD814;
+  --amazon-yellow-hover: #F7CA00;
+  --amazon-yellow-border: #FCD200;
+  --amazon-orange-btn: #FFA41C;
+  --amazon-orange-hover: #FA8900;
+  --amazon-orange-border: #FF8F00;
+  --amazon-header-nav: #131921;
+  --amazon-header-sub: #232F3E;
+  --amazon-header-gradient: linear-gradient(180deg, #FFF5EB 0%, #FFD8A8 65%, #FF9900 100%);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-bg);
+  color: var(--main-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Telugu', sans-serif;
+  line-height: 1.45;
+  overflow-x: hidden;
+}
+
+/* Amazon Yellow Button */
+.btn-amazon-primary {
+  background-color: var(--amazon-yellow-btn);
+  border: 1px solid var(--amazon-yellow-border);
+  color: #0F1111;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.btn-amazon-primary:hover {
+  background-color: var(--amazon-yellow-hover);
+  border-color: #F2C200;
+}
+
+.btn-amazon-primary:active {
+  background-color: #F0B800;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Amazon Orange Button */
+.btn-amazon-secondary {
+  background-color: var(--amazon-orange-btn);
+  border: 1px solid var(--amazon-orange-border);
+  color: #0F1111;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.btn-amazon-secondary:hover {
+  background-color: var(--amazon-orange-hover);
+  border-color: #E67A00;
+}
+
+/* Amazon Outline Button */
+.btn-amazon-outline {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  color: var(--main-text);
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.btn-amazon-outline:hover {
+  background-color: #F7FAFA;
+  border-color: #A6A6A6;
+}
+
+/* Amazon Card */
+.amazon-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.amazon-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Badges */
+.badge-amazon-deal {
+  background-color: #CC0C39;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+
+.badge-amazon-choice {
+  background-color: #232F3E;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-amazon-verified {
+  background-color: #E7F4F5;
+  color: var(--main-action-blue);
+  border: 1px solid #B8E4E8;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* No Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Search Bar */
+.amazon-search-btn {
+  background-color: #FEBD69;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+.amazon-search-btn:hover {
+  background-color: #F3A847;
+}
+
+/* Safe Padding for Bottom Nav */
+.bottom-nav-safe {
+  padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (max-width: 640px) {
+  .mobile-two-col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+
+/* ==================================================================
+   Eligibility Wizard — Component-Specific Theme Extensions
+   (Additive only. Does not modify any rule above.)
+   ================================================================== */
+
+/* ---------- Button disabled states (used on step transitions) ----- */
+.btn-amazon-primary:disabled,
+.btn-amazon-primary[aria-disabled="true"],
+.btn-amazon-secondary:disabled,
+.btn-amazon-secondary[aria-disabled="true"],
+.btn-amazon-outline:disabled,
+.btn-amazon-outline[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+  filter: grayscale(0.15);
+  pointer-events: none;
+}
+
+/* ---------- Keyboard focus rings (a11y) ---------- */
+.btn-amazon-primary:focus-visible,
+.btn-amazon-secondary:focus-visible,
+.btn-amazon-outline:focus-visible,
+.amazon-card:focus-visible,
+.wizard-radio-card:focus-within {
+  outline: 2px solid var(--primary-orange);
+  outline-offset: 2px;
+}
+
+/* Focus ring for radio/checkbox inputs used inside step cards */
+input[type="radio"].focus\:ring-\[\#FF9900\]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 2px solid var(--primary-orange);
+  outline-offset: 2px;
+}
+
+/* ---------- Wizard step transition (subtle fade + slide) ---------- */
+.wizard-step {
+  animation: wizardFadeIn 0.22s ease-out both;
+}
+
+@keyframes wizardFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Progress bar shimmer (respects reduced motion) ------- */
+.wizard-progress-fill {
+  background-color: var(--primary-orange);
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-orange) 0%,
+    var(--deep-orange) 50%,
+    var(--primary-orange) 100%
+  );
+  background-size: 200% 100%;
+  animation: wizardProgressShift 2.4s linear infinite;
+}
+
+@keyframes wizardProgressShift {
+  from { background-position: 200% 0; }
+  to   { background-position: 0 0; }
+}
+
+/* ---------- Collapsible "Not Eligible" details block ------------- */
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker,
+details > summary::marker {
+  display: none;
+  content: "";
+}
+details[open] > summary {
+  border-bottom: 1px solid var(--border-color);
+}
+details > summary::after {
+  content: "▾";
+  float: right;
+  font-size: 12px;
+  color: var(--secondary-text);
+  transition: transform 0.15s ease;
+}
+details[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+/* ---------- Radio card hover/selection accents ------------------- */
+/* Complements the Tailwind utility classes already used inline.      */
+.wizard-radio-card {
+  position: relative;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.wizard-radio-card:hover {
+  border-color: #A6A6A6;
+}
+
+/* ---------- Land-acre input disabled tint ------------------------ */
+input[type="number"]:disabled {
+  background-color: #F3F3F3;
+  color: #8A8A8A;
+  cursor: not-allowed;
+}
+
+/* ---------- Result card accents --------------------------------- */
+.wizard-result-eligible  { border-color: #B7E4C7; }
+.wizard-result-conditional { border-color: #FBD9A5; }
+.wizard-result-ineligible  { border-color: #E3E6E6; }
+
+/* ---------- Screen-reader-only utility (if Tailwind's .sr-only
+              is unavailable when component renders standalone) --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Motion & contrast preferences ------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .wizard-step,
+  .wizard-progress-fill,
+  .btn-amazon-primary,
+  .btn-amazon-secondary,
+  .btn-amazon-outline {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .btn-amazon-outline {
+    border-color: #767676;
+  }
+  details > summary {
+    color: #000;
+  }
+}
+
+/* ---------- Print layout for saved eligibility results ----------- */
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+  .btn-amazon-primary,
+  .btn-amazon-secondary,
+  .btn-amazon-outline,
+  .bottom-nav-safe {
+    display: none !important;
+  }
+  .amazon-card {
+    box-shadow: none;
+    border-color: #999;
+  }
+  details[open] > summary::after,
+  details > summary::after {
+    content: "";
+  }
+}
